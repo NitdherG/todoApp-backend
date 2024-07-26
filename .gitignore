@@ -128,3 +128,6 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# archivo de configuracion de firebase
+todoAppServiceAccount.json
