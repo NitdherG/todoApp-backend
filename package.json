@@ -22,7 +22,7 @@
     "firebase-functions": "^5.0.1"
   },
   "engines": {
-    "node": "18"
+    "node": "20"
   },
   "repository": "https://github.com/NitdherG/todoApp-backend.git",
   "author": "NitdherG <nitdherdev@gmail.com>",
