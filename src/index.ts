@@ -8,8 +8,11 @@ const app = express();
 // Configurar CORS
 app.use(
   cors({
-    origin: "http://localhost:4200", 
-    methods: ["GET", "POST", "PUT", "DELETE"], 
+    origin: [
+      "http://localhost:4200", // Origen de desarrollo
+      "https://todoapp-fbc7d.web.app" // Origen de producción
+    ],
+    methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type"], // Encabezados permitidos
   }),
 );
