@@ -36,7 +36,6 @@ export class FirestoreUserRepository implements UserRepository {
         .where("email", "==", email)
         .get();
       if (querySnapshot.empty) {
-        console.log("No se encontró el usuario con email:", email);
         throw CustomError.notFound("No se encontró el usuario");
       }
       const doc = querySnapshot.docs[0];
