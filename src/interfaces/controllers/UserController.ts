@@ -57,7 +57,8 @@ export class UserController {
       const { email } = req.body;
       const user = new User("", email);
       await addUserUseCase.execute(user);
-      res.status(201).send({ message: "User added successfully" });
+      const newUser = await getUserUseCase.execute(user.email);
+      res.status(201).send({user: newUser ,message: "User added successfully" });
     } catch (error) {
       this.handleError(error, res);
     }
