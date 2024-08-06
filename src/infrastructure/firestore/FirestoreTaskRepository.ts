@@ -15,7 +15,6 @@ export class FirestoreTaskRepository implements TaskRepository {
    */
   async addTask(task: Task, userId: string): Promise<void> {
     try {
-      console.log("task", task);
       await db.collection(`users/${userId}/tasks`).add({
         name: task.name,
         completed: task.completed,
