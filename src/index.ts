@@ -9,10 +9,12 @@ const app = express();
 app.use(
   cors({
     origin: [
+      "*",
       "http://localhost:4200", // Origen de desarrollo
-      "https://todoapp-fbc7d.web.app" // Origen de producción
-    ],
-    methods: ["GET", "POST", "PUT", "DELETE"],
+      "https://todoapp-fbc7d.web.app", // Origen de producción
+      "https://todoapp-fbc7d.firebaseapp.com",
+    ], // La URL de tu frontend Angular
+    methods: ["GET", "POST", "PUT", "DELETE"], // Métodos permitidos
     allowedHeaders: ["Content-Type"], // Encabezados permitidos
   }),
 );
